@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>MBTI world</title>
+<style>
+    * {
+		margin:0;
+	}
+	
+	/* Header */
+		header {
+			display:flex;
+			justify-content:center;
+			align-items:center;
+			padding:10px;
+			height:30px;
+			background-color:rgb(174, 211, 150);
+		}
+		.left-header {
+			flex:1;
+		}
+		.main-header {
+			flex:1;
+			align-items:center;
+			justify-content:center;
+			display:inline-block;
+			text-align:center;
+			color:black;
+		}
+		a, a:link, a:visited {
+			text-decoration:none;
+			color:black;
+		}
+		.right-header {
+			flex:1;
+			float:right;
+			text-align:right;
+		}
+	/* End of Header */
+
+    /* Content-wrapper */
+        div.content-wrapper {
+            display:contents;
+            float:left;
+            height:2000px;
+        }
+        div.clipart{
+            display:inline-grid;
+            text-align:center;
+            margin:30px;
+        }
+        span {
+            margin:10px;
+        }
+    /* End of Content-wrapper */
+</style>
+</head>
+<body>
+<!-- Header -->
+<header>
+    <div class="left-header"></div>
+    <div class="main-header"><a href="#home">MBTI world</a></div>
+    <div class="right-header">
+        ID <input type="text" name="ID" size="5">
+        PW <input type="text" name="PW" size="5">
+        <input type="submit" value="로그인">
+        <input type="button" value="회원가입">
+    </div>
+</header>
+<!-- End of Header -->
+
+<div class="wrapper">
+    <!-- Content Wrapper -->
+	<div class="content-wrapper">
+		<p style="padding:10px;">&nbsp;&nbsp;&nbsp;전체 게시글</p>
+		<hr>
+				
+		</div>
+	</div>
+	<!-- End of Content Wrapper -->
+
+</div>
+
+
+
+<a href = "{% url 'new' %}">html form 을 이용한 새 글 작성</a>
+<a href = "{% url 'formcreate' %}">django form 을 이용한 새 글 작성</a>
+<a href = "{% url 'modelformcreate' %}">django model form 을 이용한 새 글 작성</a>
+</body>
+</html>
