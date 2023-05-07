@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>MBTI world</title>
+<style>
+	* {
+		margin:0;
+	}
+	
+	/* Wrapper */
+        div.wrapper {
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            padding:100px;
+        }
+
+		/* Info */
+			div.mbti {
+				display:flex;
+				flex-direction:column;
+				justify-content:center;
+				align-items:center;
+				width:1000px; height:500px;
+				background-color:lightgray;
+				text-align:center;
+				border-radius:50px;
+			}
+		/* End of Info */
+	/* End of Wrapper */
+</style>
+</head>
+<body>	
+	<div class="wrapper">
+		<div class="mbti">
+			<h1>MBTI TEST</h1>
+			<br>
+            <h3>문제가 생겼을 때 당신의 대처법은?</h3><br>
+			<form action="{% url 'mbtiresult' %}" method="POST">
+                {% csrf_token %}
+                <input type="radio" name="EI" value="E"> 말이 많아짐
+                <input type="radio" name="EI" value="I"> 생각이 많아짐
+                <br>
+                <input type="radio" name="SN" value="S"> 그냥 그런가 보다
+                <input type="radio" name="SN" value="N"> 어떻게 그럴 수 있지
+                <br>
+                <input type="radio" name="FT" value="F"> 이해가 안 되는데 공감은 함
+                <input type="radio" name="FT" value="T"> 이해가 돼야 공감을 하든 말든
+                <br>
+                <input type="radio" name="JP" value="J"> 한다면 함
+                <input type="radio" name="JP" value="P"> 뭐부터 하지?
+                <br>
+                <input type="submit" value="완료">
+            </form>
+		</div>
+	</div>
+	
+</body>
+</html>

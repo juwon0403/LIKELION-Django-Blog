@@ -22,10 +22,13 @@ urlpatterns = [
     path('', views.home, name = 'home'),
 
     path('new/', views.new, name = 'new'),
-     path('signup/', views.signup, name = 'signup'),
+    path('login/', views.login, name = 'login'),
+    path('signup/', views.signup, name = 'signup'),
+
+    path('mbtitest/', views.mbtitest, name = 'mbtitest'),
+    path('mbtiresult/', views.mbtiresult, name = 'mbtiresult'),
+
     path('create/', views.create, name = 'create'),
-
     path('formcreate/', views.formcreate, name = 'formcreate'),
-
     path('modelformcreate/', views.formcreate, name = 'modelformcreate'),
 ]

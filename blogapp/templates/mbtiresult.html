@@ -7,48 +7,44 @@
 	* {
 		margin:0;
 	}
-		
+	
 	/* Wrapper */
         div.wrapper {
             display:flex;
             justify-content:center;
             align-items:center;
-            padding:150px;
+            padding:100px;
         }
 
 		/* Info */
-			div.join {
+			div.mbti {
 				display:flex;
 				flex-direction:column;
 				justify-content:center;
 				align-items:center;
-				width:700px; height:400px;
+				width:1000px; height:500px;
 				background-color:lightgray;
 				text-align:center;
 				border-radius:50px;
 			}
-			a, a:link, a:visited {
+            a, a:link, a:visited {
 			text-decoration:none;
 			color:black;
-			}
+		    }
 		/* End of Info */
 	/* End of Wrapper */
 </style>
 </head>
 <body>	
 	<div class="wrapper">
-		<div class="join">
-			<h1>welcome to MBTI world</h1>
+		<div class="mbti">
+			<h3>당신의 MBTI는</h3>
 			<br>
-			<form method="POST">
-                {% csrf_token %}
-				<p>아이디 <input type="text" placeholder="아이디"></p>
-				<p>비밀번호 <input type="text" placeholder="비밀번호"></p>
-			<br>
-            <a href = "{% url 'login' %}">로그인</a>
-            <a href = "{% url 'signup' %}">가입하기</a>
-			</form>
+            <h1></h1>
+            <br>
+            <a href = "{% url 'login' %}">게시판 구경하기</a>
 		</div>
 	</div>
+	
 </body>
 </html>
