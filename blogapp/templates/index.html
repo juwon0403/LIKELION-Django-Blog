@@ -65,7 +65,7 @@
         ID <input type="text" name="ID" size="5">
         PW <input type="text" name="PW" size="5">
         <input type="submit" value="로그인">
-        <input type="button" value="회원가입">
+        <a href = "{% url 'signup' %}">회원가입</a>
     </div>
 </header>
 <!-- End of Header -->
@@ -81,7 +81,6 @@
 	<!-- End of Content Wrapper -->
 
 </div>
-
 
 
 <a href = "{% url 'new' %}">html form 을 이용한 새 글 작성</a>

@@ -11,6 +11,9 @@ def home(request):
 def new(request):
     return render(request, 'new.html')
 
+def signup(request):
+    return render(request, 'signup.html')
+
 def create(request):
     if(request.method == 'POST'):
         post = Blog()
